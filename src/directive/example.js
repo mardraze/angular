@@ -1,11 +1,11 @@
 angular.module('ngApp')
 /** @ngInject */
-.directive('main', function () {
+.directive('example', function () {
     return {
         restrict: 'E',
         link: function (scope, element, attr) {
             scope.text = 'Hello';
         },
-        templateUrl: 'directive/main.html'
+        templateUrl: 'directive/example.html'
     };
 });

@@ -1,6 +1,6 @@
 angular.module('ngApp')
 /** @ngInject */
-.controller('PasswordController', function($scope) {
+.controller('ExampleController', function($scope) {
   $scope.password = '';
   $scope.grade = function() {
     var size = $scope.password.length;

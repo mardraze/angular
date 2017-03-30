@@ -1,4 +1,4 @@
-  describe("Main directive", function() {
+  describe("Example directive test", function() {
     var $compile,
         $rootScope;
     // Load the myApp module, which contains the directive
@@ -17,7 +17,7 @@
 
 
     it('Replaces the element with the appropriate content', function() {
-      var element = $compile("<main></main>")($rootScope);
+      var element = $compile("<example></example>")($rootScope);
       $rootScope.$digest();
       expect(element.html()).toContain("Hello");
     });

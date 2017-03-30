@@ -2,7 +2,7 @@ angular.module('ngApp', []);
 
 angular.module('ngApp')
 /** @ngInject */
-.controller('PasswordController', function($scope) {
+.controller('ExampleController', function($scope) {
   $scope.password = '';
   $scope.grade = function() {
     var size = $scope.password.length;
@@ -17,13 +17,13 @@ angular.module('ngApp')
 });
 angular.module('ngApp')
 /** @ngInject */
-.directive('main', function () {
+.directive('example', function () {
     return {
         restrict: 'E',
         link: function (scope, element, attr) {
             scope.text = 'Hello';
         },
-        templateUrl: 'directive/main.html'
+        templateUrl: 'directive/example.html'
     };
 });
 
