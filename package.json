@@ -1,19 +1,13 @@
 {
-  "name": "ngApp",
+  "name": "mardraze/angular",
   "version": "1.0.0",
-  "description": "",
-    "src": "src",
-    "build": "build",
-    "devApp": "build/app.dev.js",
-    "devTemplates": "build/templates.js",
-    "app": "build/app.js",
-    "vendor": "build/vendor.js",
+  "description": "Angular JS v1 project structure for hybrid applications",
   "main": "Gruntfile.js",
   "dependencies": {
-    "angular": "^1.5.9"
+    "angular": "^1.6"
   },
   "devDependencies": {
-    "angular-mocks": "^1.6.3",
+    "angular-mocks": "^1.6",
     "angular-templatecache": "0.0.1",
     "grunt": "^0.4",
     "grunt-angular-templates": "^1.1.0",
@@ -26,8 +20,8 @@
     "jasmine-core": "^2.5.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt jasmine"
   },
-  "author": "Marcin Drazek",
+  "author": "Marcin Drazek<marcindr1@gmail.com>",
   "license": "ISC"
 }
