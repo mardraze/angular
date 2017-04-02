@@ -100,20 +100,28 @@ module.exports = function(grunt) {
           }
         }
     });
-
+    grunt.task.registerTask('check-vendors', 'Vendors checking', function() {
+        var vendorsFile = grunt.config.get('variables.prodVendor');
+        if(!grunt.file.exists(vendorsFile)){
+            grunt.task.run('uglify:vendor');
+        }
+    });
+    
     grunt.registerTask('build', [
+        'check-vendors',
         'ngtemplates',
         'concat',
-        'jasmine'
-    ]);
-    grunt.registerTask('default', [
-        'build'
+        'jasmine:dev'
     ]);
     
     grunt.registerTask('dist', [
         'build',
         'ngAnnotate',
-        'uglify'
+        'uglify',
+        'jasmine:prod'
+    ]);
+    grunt.registerTask('default', [
+        'build'
     ]);
 
     grunt.loadNpmTasks('grunt-angular-templates');
