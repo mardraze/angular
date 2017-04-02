@@ -1,7 +1,11 @@
-# Struktura projektu dla frameworka AngularJS 1
+# Szablon projektu aplikacji AngularJS
+
+Poniższa struktura sprawdza się w budowie aplikacji tworzonych w oparciu o framework AngularJS w wersji 1, osadzanych na istniejących już stronach, jak również w pozostałych zastosowaniach.
+Narzucane jest wyłącznie korzystanie z frameworka AngularJS w wersji 1 oraz korzystanie z narzędzi grunt oraz npm. 
+Głównym zadaniem struktury jest przyspieszenie prac programistów nad aplikacją, zwiększenie wydajności oraz zabezpieczenie kodu aplikacji w trybie produkcyjnym. Wszystkie ścieżki, nazwy plików wynikowych, nazwy katalogów są łatwo konfigurowalne w pliku Gruntfile.js
 
 # Kilka słów o strukturze
-- Kod źródłowy aplikacji znajduje się w folderze "src"
+- Kod źródłowy aplikacji znajduje się w folderze src
 - Wymagany jest plik module.js w folderze src. Powinniśmy w nim zainicjalizować moduł AngularJS, określić zależności itp.
 - Podfoldery w katalogu źródłowym src możemy ustalić według własnych upodobań
 - Wszystkie pliki szablonów mają domyślnie rozszerzenie .html
@@ -42,4 +46,3 @@ W trybie produkcyjnym
 
 - build/vendor.js 
 - build/app.js
-
