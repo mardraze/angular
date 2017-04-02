@@ -1,14 +1,45 @@
-# Yet another AngularJS project structure
+# Struktura projektu dla frameworka AngularJS 1
 
-What are features of good project structure? 
+# Kilka słów o strukturze
+- Kod źródłowy aplikacji znajduje się w folderze "src"
+- Wymagany jest plik module.js w folderze src. Powinniśmy w nim zainicjalizować moduł AngularJS, określić zależności itp.
+- Podfoldery w katalogu źródłowym src możemy ustalić według własnych upodobań
+- Wszystkie pliki szablonów mają domyślnie rozszerzenie .html
+- Pliki JS są łączone w jeden plik build/app.dev.js
+- Pliki HTML są cachowane do pliku build/templates.js
+- Plik build/app.dev.js jest przetwarzany przez ngAnnotate, w celu umożliwienia minimalizacji kodu. Plikiem wynikowym jest domyślnie build/app.dev.js-annotate.js
+- Pliki build/app.dev.js-annotate.js oraz build/templates.js są minimalizowane i tworzony jest plik wynikowy build/app.js
+- Wszystkie biblioteki podajemy w pliku Gruntfile.js, plikiem wynikowym jest build/vendor.js
+- Testy jednostkowe znajdują się w folderze "spec"
 
-1. Application building must be fast. Then it will be cheaper for your client.
+# Komendy
 
-2. Usually your application must be embedded in the page, so you have to avoid depedency conflicts.
+Instalacja projektu
 
-3. Debugging must be fast. The best debuggers are in the browser.
+`npm install`
 
-4. High performance of the application is very important.
+Generuje pliki dla trybu developerskiego i je testuje
 
-5. You should be able to add unit tests.
+`grunt`
+
+Generuje pliki dla trybu produkcyjnego i je testuje
+
+`grunt dist`
+
+Nasłuchuje na zmiany w plikach. Jeżeli którykolkiek plik z kodem źródłowym zmieni się, to na nowo generuje pliki dla trybu developerskiego
+
+`grunt watch`
+
+# Wdrażanie aplikacji
+
+W trybie developerskim aby uruchomić aplikację, załączamy pliki 
+
+- build/vendor.js
+- build/app.dev.js
+- build/templates.js
+
+W trybie produkcyjnym 
+
+- build/vendor.js 
+- build/app.js
 
