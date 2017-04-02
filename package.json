@@ -1,5 +1,5 @@
 {
-  "name": "mardraze/angular",
+  "name": "mardraze-angular",
   "version": "1.0.0",
   "description": "Angular JS v1 project structure for hybrid applications",
   "main": "Gruntfile.js",
