@@ -2,8 +2,12 @@
   "name": "ngApp",
   "version": "1.0.0",
   "description": "",
-  "srcDir": "src",
-  "outDir": "out",
+    "src": "src",
+    "build": "build",
+    "devApp": "build/app.dev.js",
+    "devTemplates": "build/templates.js",
+    "app": "build/app.js",
+    "vendor": "build/vendor.js",
   "main": "Gruntfile.js",
   "dependencies": {
     "angular": "^1.5.9"

@@ -1,6 +1,35 @@
+angular.module('ngApp', []);
+
 angular.module('ngApp')
 /** @ngInject */
-.factory('Api', function ($http, $q) {
+.controller('ExampleController', ["$scope", function($scope) {
+  $scope.password = '';
+  $scope.grade = function() {
+    var size = $scope.password.length;
+    if (size > 8) {
+      $scope.strength = 'strong';
+    } else if (size > 3) {
+      $scope.strength = 'medium';
+    } else {
+      $scope.strength = 'weak';
+    }
+  };
+}]);
+angular.module('ngApp')
+/** @ngInject */
+.directive('example', function () {
+    return {
+        restrict: 'E',
+        link: function (scope, element, attr) {
+            scope.text = 'Hello';
+        },
+        templateUrl: 'directive/example.html'
+    };
+});
+
+angular.module('ngApp')
+/** @ngInject */
+.factory('Api', ["$http", "$q", function ($http, $q) {
     var get = function (url) {
         var defer = $q.defer();
         $http.get(url).then(function(res){
@@ -14,7 +43,6 @@ angular.module('ngApp')
         });
         return defer.promise;
     };
-    
     
     var post = function (url, params) {
         var defer = $q.defer();
@@ -54,4 +82,4 @@ angular.module('ngApp')
         post: post,
         postCache: postCache
     };
-});
+}]);
